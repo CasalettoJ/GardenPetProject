@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78ab8bbeae598e46a7d73dcaaef9946, type: 3}
+  m_Name: CursorBrowseState
+  m_EditorClassIdentifier: 
+  stateName: CursorBrowse
+  ActionObjects:
+  - {fileID: 11400000, guid: 6bc368ca683141d4f85849eb0d34cd30, type: 2}
+  - {fileID: 11400000, guid: 271c003a9bef4fc4592c66823910c793, type: 2}
+  FixedActionObjects: []
+  TransitionConditionObjects:
+  - {fileID: 11400000, guid: 3c8989d179223394aa848ad465912bc2, type: 2}
