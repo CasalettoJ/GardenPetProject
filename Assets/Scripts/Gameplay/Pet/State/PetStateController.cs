@@ -14,6 +14,10 @@ namespace PetProject
         public PetAbilities Abilities { get; private set; }
         public NavMeshAgent NavMeshAgent { get; private set; }
 
+        [HideInInspector] public Vector3 TargetMovementPoint;
+        public float SightRadius = 10.0f;
+        public float SecondsOfThought = 4;
+
         public override void Start()
         {
             base.Start();

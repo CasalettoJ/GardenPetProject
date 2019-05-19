@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: PetWanderingState
   m_EditorClassIdentifier: 
   stateName: PetWanderingState
-  ActionObjects: []
+  ActionObjects:
+  - {fileID: 11400000, guid: 08efd459469811940b05471403da1328, type: 2}
+  - {fileID: 11400000, guid: bb115ca2da2168b4896532b61ef48ed2, type: 2}
   FixedActionObjects: []
   TransitionConditionObjects: []

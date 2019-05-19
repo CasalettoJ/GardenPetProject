@@ -385,13 +385,13 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 2
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
@@ -448,11 +448,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   States:
-  - {fileID: 11400000, guid: 4c7550dfd78295a4b9f12dba2958b0dc, type: 2}
+  - {fileID: 11400000, guid: 77672ad15e04a4e46a655422feb3ddec, type: 2}
   - {fileID: 11400000, guid: 947d52995adea83459e9f23ad933a452, type: 2}
   - {fileID: 11400000, guid: c6a04570dca173848a5103b901eba529, type: 2}
   - {fileID: 11400000, guid: 1846571553298bd45911f2271c43901e, type: 2}
-  - {fileID: 11400000, guid: 77672ad15e04a4e46a655422feb3ddec, type: 2}
+  - {fileID: 11400000, guid: 4c7550dfd78295a4b9f12dba2958b0dc, type: 2}
   - {fileID: 11400000, guid: 232dccaf09f894346ae981c5c02b0d3a, type: 2}
   DeltaTime: 0
   FixedDeltaTime: 0
+  TargetMovementPoint: {x: 0, y: 0, z: 0}
+  SightRadius: 10
+  SecondsOfThought: 4
