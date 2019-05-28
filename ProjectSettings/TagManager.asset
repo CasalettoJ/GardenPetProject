@@ -41,6 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI Billboard
-    uniqueID: 1691147929
+  - name: Overlay
+    uniqueID: 3513910547
     locked: 0
