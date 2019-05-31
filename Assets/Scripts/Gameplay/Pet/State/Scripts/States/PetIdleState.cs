@@ -7,6 +7,9 @@ namespace PetProject
     [CreateAssetMenu(fileName = "PetIdleState", menuName = "StateMachines/Pet/States/PetIdleState")]
     public class PetIdleState : State<PetStateController>
     {
-        
+        public override void OnEnter(PetStateController controller)
+        {
+            controller.Animator.SetInteger(controller.AnimationStateName, controller.IdlingAnimationState);
+        }
     }
 }

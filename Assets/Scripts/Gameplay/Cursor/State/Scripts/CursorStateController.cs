@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PetProject
 {
+    [System.Serializable]
     public class CursorStateController : StateController<CursorStateController>
     {
         [Header("Cursors")]

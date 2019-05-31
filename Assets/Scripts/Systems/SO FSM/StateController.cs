@@ -7,7 +7,7 @@ namespace PetProject
     public abstract class StateController<T> : MonoBehaviour, ISerializationCallbackReceiver where T: StateController<T>
     {
 
-        [Header("Settings")]
+        [Header("States")]
         [Tooltip("This list will only accept unique State ScriptableObjects.")]
         [SerializeField]
         private List<ScriptableObject> States = new List<ScriptableObject>();
@@ -46,7 +46,7 @@ namespace PetProject
 
         }
 
-        private void Update()
+        public virtual void Update()
         {
             DeltaTime = Time.deltaTime;
             if (_currentState != null)
@@ -56,7 +56,7 @@ namespace PetProject
             ConditionCheck();
         }
 
-        private void FixedUpdate()
+        public virtual void FixedUpdate()
         {
             FixedDeltaTime = Time.fixedDeltaTime;
             if (_currentState != null)
