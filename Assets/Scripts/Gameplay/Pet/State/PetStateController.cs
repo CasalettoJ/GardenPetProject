@@ -13,7 +13,7 @@ namespace PetProject
     public class PetStateController : StateController<PetStateController>
     {
         [Header("Animator")]
-        public string MovementSpeedName = "MovementSpeed";
+        public string IsMovingStateName = "IsMoving";
         public string AnimationStateName = "AnimationState";
         public int NoneAnimationState = 0;
         public int IdlingAnimationState = 1;
@@ -32,6 +32,8 @@ namespace PetProject
         public float SightRadius = 10.0f;
         public float SecondsOfThought = 4;
 
+        private Vector3 _prevPos;
+
         public override void Start()
         {
             Stats = GetComponent<PetStats>();
@@ -42,10 +44,12 @@ namespace PetProject
             base.Start();
         }
 
-        public override void FixedUpdate()
+        public override void Update()
         {
-            base.FixedUpdate();
-            Animator.SetFloat(MovementSpeedName, NavMeshAgent.speed);
+            Debug.Log("Updating");
+            base.Update();
+            Animator.SetBool(IsMovingStateName, _prevPos != m_transform.position);
+            _prevPos = m_transform.position;
         }
     }
 }
