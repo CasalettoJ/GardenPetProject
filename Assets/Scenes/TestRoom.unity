@@ -21,8 +21,8 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.5887772, g: 0.79911894, b: 0.9528302, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientEquatorColor: {r: 0.9622642, g: 0.5310609, b: 0.72102356, a: 1}
+  m_AmbientGroundColor: {r: 0.9528302, g: 0.085395135, b: 0.11254384, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -107,8 +107,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentSlope: 60
+    agentClimb: 0.75
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -816,9 +816,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'WASD - Move Camera
 
-    Q/E - Rotate Camera
+    Q/E - Up/Down Camera
 
-    ScrollWheel - Zoom Camera
+    ScrollWheel - Pan Camera
 
 
     Mouse - Move Cursor
@@ -900,7 +900,7 @@ MonoBehaviour:
     characterCount: 127
     spriteCount: 0
     spaceCount: 25
-    wordCount: 25
+    wordCount: 26
     linkCount: 0
     lineCount: 7
     pageCount: 1
@@ -1380,6 +1380,7 @@ GameObject:
   - component: {fileID: 1585690235}
   - component: {fileID: 1585690234}
   - component: {fileID: 1585690237}
+  - component: {fileID: 1585690239}
   - component: {fileID: 1585690238}
   m_Layer: 0
   m_Name: Main Camera
@@ -1520,7 +1521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585690233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14b2487a73b2b2545847b6a9fd09362f, type: 3}
   m_Name: 
@@ -1536,6 +1537,46 @@ MonoBehaviour:
   zoomSpeed: 1000
   _cursor: {fileID: 365099074}
   _lockedOnTransform: {fileID: 0}
+--- !u!114 &1585690239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585690233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5e638bbcc3b764d926ae74b252ca13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boost: 3.5
+  positionLerpTime: 0.2
+  mouseSensitivityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 5
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 2.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationLerpTime: 0.01
+  invertY: 0
 --- !u!1001 &1599310180
 PrefabInstance:
   m_ObjectHideFlags: 0

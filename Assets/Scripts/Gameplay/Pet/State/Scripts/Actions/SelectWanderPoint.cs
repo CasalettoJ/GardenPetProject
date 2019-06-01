@@ -10,7 +10,7 @@ namespace PetProject
     {
         public override void Act(PetStateController stateController)
         {
-            if (!stateController.NavMeshAgent.hasPath)
+            if (!stateController.NavMeshAgent.hasPath || (stateController.NavMeshAgent.hasPath && !stateController.IsMoving))
             {
                 SetNewDestination(stateController);
             }
