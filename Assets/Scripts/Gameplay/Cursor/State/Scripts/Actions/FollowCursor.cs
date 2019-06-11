@@ -10,6 +10,7 @@ namespace PetProject
         [Header("Settings")]
         public string cursorLayer = "Cursor_Layer";
         public float yOffset = 0.025f;
+        public float raycastLength = 300.0f;
 
         public override void Act(CursorStateController stateController)
         {
@@ -20,7 +21,7 @@ namespace PetProject
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100.0f, LayerMask.GetMask(cursorLayer)))
+            if (Physics.Raycast(ray, out hit, raycastLength, LayerMask.GetMask(cursorLayer)))
             {
                 stateController.m_transform.position = hit.point + new Vector3(0, yOffset, 0);
             }
