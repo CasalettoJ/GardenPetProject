@@ -10,6 +10,6 @@ ScriptableObject FiniteStateMachine partly based on SharpAccent tutorials https:
 GameEvent code partly based on https://github.com/FuzzyHobo/UnityCallbackAndEventTutorial/blob/master/Assets/Scenes/EventCallbackScene/Event.cs
 
 
-Small gifs:
+# Small gifs:
 https://gfycat.com/ParallelGrizzledHippopotamus
 https://gfycat.com/adventuroustemptingcattle
